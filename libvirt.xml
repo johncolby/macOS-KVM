@@ -1,9 +1,41 @@
-<domain type='kvm' id='37' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
   <name>macOS</name>
   <uuid>d06d502a-904a-4b34-847d-debf1a3d76c7</uuid>
   <memory unit='KiB'>25165824</memory>
   <currentMemory unit='KiB'>25165824</currentMemory>
-  <vcpu placement='static'>8</vcpu>
+  <vcpu placement='static' current='12'>16</vcpu>
+  <vcpus>
+    <vcpu id='0' enabled='yes' hotpluggable='no' order='1'/>
+    <vcpu id='1' enabled='yes' hotpluggable='yes' order='2'/>
+    <vcpu id='2' enabled='yes' hotpluggable='yes' order='3'/>
+    <vcpu id='3' enabled='yes' hotpluggable='yes' order='4'/>
+    <vcpu id='4' enabled='yes' hotpluggable='yes' order='5'/>
+    <vcpu id='5' enabled='yes' hotpluggable='yes' order='6'/>
+    <vcpu id='6' enabled='yes' hotpluggable='yes' order='7'/>
+    <vcpu id='7' enabled='yes' hotpluggable='yes' order='8'/>
+    <vcpu id='8' enabled='yes' hotpluggable='yes' order='9'/>
+    <vcpu id='9' enabled='yes' hotpluggable='yes' order='10'/>
+    <vcpu id='10' enabled='yes' hotpluggable='yes' order='11'/>
+    <vcpu id='11' enabled='yes' hotpluggable='yes' order='12'/>
+    <vcpu id='12' enabled='no' hotpluggable='yes'/>
+    <vcpu id='13' enabled='no' hotpluggable='yes'/>
+    <vcpu id='14' enabled='no' hotpluggable='yes'/>
+    <vcpu id='15' enabled='no' hotpluggable='yes'/>
+  </vcpus>
+  <cputune>
+    <vcpupin vcpu='0' cpuset='0'/>
+    <vcpupin vcpu='1' cpuset='6'/>
+    <vcpupin vcpu='2' cpuset='1'/>
+    <vcpupin vcpu='3' cpuset='7'/>
+    <vcpupin vcpu='4' cpuset='2'/>
+    <vcpupin vcpu='5' cpuset='8'/>
+    <vcpupin vcpu='6' cpuset='3'/>
+    <vcpupin vcpu='7' cpuset='9'/>
+    <vcpupin vcpu='8' cpuset='4'/>
+    <vcpupin vcpu='9' cpuset='10'/>
+    <vcpupin vcpu='10' cpuset='5'/>
+    <vcpupin vcpu='11' cpuset='11'/>
+  </cputune>
   <resource>
     <partition>/machine</partition>
   </resource>
@@ -20,7 +52,7 @@
     <vmport state='off'/>
   </features>
   <cpu mode='host-passthrough' check='none'>
-    <topology sockets='1' cores='4' threads='2'/>
+    <topology sockets='1' cores='8' threads='2'/>
     <cache mode='passthrough'/>
     <feature policy='require' name='topoext'/>
   </cpu>
@@ -40,95 +72,74 @@
     <emulator>/usr/bin/qemu-system-x86_64</emulator>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
-      <source file='/var/lib/libvirt/images/ESP.qcow2' index='2'/>
+      <source file='/var/lib/libvirt/images/ESP.qcow2'/>
       <backingStore/>
       <target dev='sda' bus='sata'/>
-      <alias name='sata0-0-0'/>
       <address type='drive' controller='0' bus='0' target='0' unit='0'/>
     </disk>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
-      <source file='/var/lib/libvirt/images/macOS.qcow2' index='1'/>
+      <source file='/var/lib/libvirt/images/macOS.qcow2'/>
       <backingStore/>
       <target dev='sdc' bus='sata'/>
-      <alias name='sata0-0-2'/>
       <address type='drive' controller='0' bus='0' target='0' unit='2'/>
     </disk>
     <controller type='usb' index='0' model='ich9-ehci1'>
-      <alias name='usb'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1d' function='0x7'/>
     </controller>
     <controller type='usb' index='0' model='ich9-uhci1'>
-      <alias name='usb'/>
       <master startport='0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1d' function='0x0' multifunction='on'/>
     </controller>
     <controller type='usb' index='0' model='ich9-uhci2'>
-      <alias name='usb'/>
       <master startport='2'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1d' function='0x1'/>
     </controller>
     <controller type='usb' index='0' model='ich9-uhci3'>
-      <alias name='usb'/>
       <master startport='4'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1d' function='0x2'/>
     </controller>
     <controller type='sata' index='0'>
-      <alias name='ide'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x1f' function='0x2'/>
     </controller>
-    <controller type='pci' index='0' model='pcie-root'>
-      <alias name='pcie.0'/>
-    </controller>
+    <controller type='pci' index='0' model='pcie-root'/>
     <controller type='pci' index='1' model='pcie-root-port'>
       <model name='pcie-root-port'/>
       <target chassis='1' port='0x10'/>
-      <alias name='pci.1'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0' multifunction='on'/>
     </controller>
     <controller type='pci' index='2' model='pcie-to-pci-bridge'>
       <model name='pcie-pci-bridge'/>
-      <alias name='pci.2'/>
       <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/>
     </controller>
     <controller type='pci' index='3' model='pcie-root-port'>
       <model name='pcie-root-port'/>
       <target chassis='3' port='0x11'/>
-      <alias name='pci.3'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x1'/>
     </controller>
     <controller type='pci' index='4' model='pcie-root-port'>
       <model name='pcie-root-port'/>
       <target chassis='4' port='0x12'/>
-      <alias name='pci.4'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x2'/>
     </controller>
     <controller type='pci' index='5' model='pcie-root-port'>
       <model name='pcie-root-port'/>
       <target chassis='5' port='0x8'/>
-      <alias name='pci.5'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x0'/>
     </controller>
     <interface type='bridge'>
       <mac address='52:54:00:92:d4:7b'/>
       <source bridge='br0'/>
-      <target dev='vnet0'/>
       <model type='vmxnet3'/>
-      <alias name='net0'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x0'/>
     </interface>
-    <input type='mouse' bus='ps2'>
-      <alias name='input0'/>
-    </input>
-    <input type='keyboard' bus='ps2'>
-      <alias name='input1'/>
-    </input>
+    <input type='mouse' bus='ps2'/>
+    <input type='keyboard' bus='ps2'/>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <driver name='vfio'/>
       <source>
         <address domain='0x0000' bus='0x0a' slot='0x00' function='0x0'/>
       </source>
-      <alias name='hostdev0'/>
       <address type='pci' domain='0x0000' bus='0x03' slot='0x00' function='0x0' multifunction='on'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
@@ -136,7 +147,6 @@
       <source>
         <address domain='0x0000' bus='0x0a' slot='0x00' function='0x1'/>
       </source>
-      <alias name='hostdev1'/>
       <address type='pci' domain='0x0000' bus='0x03' slot='0x00' function='0x1'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
@@ -144,27 +154,18 @@
       <source>
         <address domain='0x0000' bus='0x0c' slot='0x00' function='0x4'/>
       </source>
-      <alias name='hostdev2'/>
       <address type='pci' domain='0x0000' bus='0x04' slot='0x00' function='0x0'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
-      <driver name='vfio'/>
       <source>
         <address domain='0x0000' bus='0x0c' slot='0x00' function='0x3'/>
       </source>
-      <alias name='hostdev3'/>
       <address type='pci' domain='0x0000' bus='0x05' slot='0x00' function='0x0'/>
     </hostdev>
     <memballoon model='none'/>
   </devices>
-  <seclabel type='dynamic' model='apparmor' relabel='yes'>
-    <label>libvirt-d06d502a-904a-4b34-847d-debf1a3d76c7</label>
-    <imagelabel>libvirt-d06d502a-904a-4b34-847d-debf1a3d76c7</imagelabel>
-  </seclabel>
-  <seclabel type='dynamic' model='dac' relabel='yes'>
-    <label>+64055:+108</label>
-    <imagelabel>+64055:+108</imagelabel>
-  </seclabel>
+  <seclabel type='dynamic' model='apparmor' relabel='yes'/>
+  <seclabel type='dynamic' model='dac' relabel='yes'/>
   <qemu:commandline>
     <qemu:arg value='-device'/>
     <qemu:arg value='isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc'/>
