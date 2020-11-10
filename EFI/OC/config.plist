@@ -315,6 +315,8 @@
 		<key>Block</key>
 		<array>
 			<dict>
+				<key>Arch</key>
+				<string>Any</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
@@ -341,6 +343,8 @@
 		<key>Patch</key>
 		<array>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpu_topology_sort</string>
 				<key>Comment</key>
@@ -369,6 +373,8 @@
 				<integer>0</integer>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -418,6 +424,8 @@
 			<key>ExtendBTFeatureFlags</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
+			<false/>
+			<key>ForceSecureBootScheme</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
@@ -625,6 +633,8 @@
 	<dict>
 		<key>Automatic</key>
 		<true/>
+		<key>CustomMemory</key>
+		<false/>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
@@ -728,6 +738,8 @@
 			<string></string>
 			<key>DirectGopRendering</key>
 			<false/>
+			<key>ForceResolution</key>
+			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
 			<key>ProvideConsoleGop</key>
@@ -806,6 +818,8 @@
 			<dict>
 				<key>Address</key>
 				<integer>268435456</integer>
+				<key>Type</key>
+				<string>Reserved</string>
 				<key>Comment</key>
 				<string>HD3000: IGPU memory corruption errata</string>
 				<key>Enabled</key>
