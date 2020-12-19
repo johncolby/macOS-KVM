@@ -29,7 +29,7 @@
 			<key>IOClass</key>
 			<string>AppleUSBMergeNub</string>
 			<key>IONameMatch</key>
-			<string>pci1022,149c</string>
+			<string>AppleUSBXHCIPCI</string>
 			<key>IOProviderClass</key>
 			<string>AppleUSBXHCIPCI</string>
 			<key>IOProviderMergeProperties</key>
