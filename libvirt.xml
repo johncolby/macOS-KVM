@@ -91,33 +91,24 @@
     <controller type='pci' index='1' model='pcie-root-port'>
       <model name='pcie-root-port'/>
       <target chassis='1' port='0x10'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0' multifunction='on'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x0' multifunction='on'/>
     </controller>
-    <controller type='pci' index='2' model='pcie-to-pci-bridge'>
-      <model name='pcie-pci-bridge'/>
-      <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/>
+    <controller type='pci' index='2' model='pcie-root-port'>
+      <model name='pcie-root-port'/>
+      <target chassis='2' port='0x11'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x1'/>
     </controller>
     <controller type='pci' index='3' model='pcie-root-port'>
       <model name='pcie-root-port'/>
-      <target chassis='3' port='0x11'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x1'/>
-    </controller>
-    <controller type='pci' index='4' model='pcie-root-port'>
-      <model name='pcie-root-port'/>
-      <target chassis='4' port='0x12'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x2'/>
-    </controller>
-    <controller type='pci' index='5' model='pcie-root-port'>
-      <model name='pcie-root-port'/>
-      <target chassis='5' port='0x8'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x0'/>
+      <target chassis='3' port='0x12'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x2'/>
     </controller>
     <controller type="usb" index="0" model="none"/>
     <interface type='bridge'>
       <mac address='52:54:00:92:d4:7b'/>
       <source bridge='br0'/>
       <model type='e1000-82545em'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x06' function='0x0'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
     </interface>
     <input type='mouse' bus='ps2'/>
     <input type='keyboard' bus='ps2'/>
@@ -126,27 +117,28 @@
       <source>
         <address domain='0x0000' bus='0x0a' slot='0x00' function='0x0'/>
       </source>
-      <address type='pci' domain='0x0000' bus='0x03' slot='0x00' function='0x0' multifunction='on'/>
+      <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0' multifunction='on'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <driver name='vfio'/>
       <source>
         <address domain='0x0000' bus='0x0a' slot='0x00' function='0x1'/>
       </source>
-      <address type='pci' domain='0x0000' bus='0x03' slot='0x00' function='0x1'/>
+      <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x1'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <driver name='vfio'/>
       <source>
         <address domain='0x0000' bus='0x0c' slot='0x00' function='0x4'/>
       </source>
-      <address type='pci' domain='0x0000' bus='0x04' slot='0x00' function='0x0'/>
+      <address type='pci' domain='0x0000' bus='0x02' slot='0x00' function='0x0'/>
     </hostdev>
     <hostdev mode='subsystem' type='pci' managed='yes'>
+      <driver name='vfio'/>
       <source>
         <address domain='0x0000' bus='0x0c' slot='0x00' function='0x3'/>
       </source>
-      <address type='pci' domain='0x0000' bus='0x05' slot='0x00' function='0x0'/>
+      <address type='pci' domain='0x0000' bus='0x03' slot='0x00' function='0x0'/>
     </hostdev>
     <memballoon model='none'/>
   </devices>
