@@ -248,7 +248,7 @@
 				<key>Mask</key>
 				<data>/wAA//8=</data>
 				<key>MaxKernel</key>
-				<string>19.99.99</string>
+				<string>20.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
@@ -278,7 +278,7 @@
 				<key>Mask</key>
 				<data>/////wAAAP///wA=</data>
 				<key>MaxKernel</key>
-				<string>19.99.99</string>
+				<string>20.99.99</string>
 				<key>MinKernel</key>
 				<string>17.0.0</string>
 				<key>Replace</key>
