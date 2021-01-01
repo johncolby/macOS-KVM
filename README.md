@@ -94,7 +94,7 @@ Info:      Processes: 355 Uptime: 2h 42m Memory: 31.31 GiB used: 25.84 GiB (82.5
 - Remove `SSDT-USBX.aml` (not needed; USB power properties can be added to USB port mapping kext (`USBmap.kext`).
 - Remove `WhateverGreen.kext` (not needed for my needs with AMD 5700XT, although probably never hurts).
 - Remove `MCEReporterDisabler.kext` (not getting kernel panics, so not needed).
-- Keep `SSDT-PLUG.aml` (not needed for CPU power management, which the hypervisor manages, but needed to enable GPU power management through [`AGPMInjector.kext`](https://github.com/Pavo-IM/AGPMInjector); make sure to use/make a version suited to the ACPI of the OVMF firmware)
+- Remove `SSDT-PLUG.aml` (not needed for CPU power management, which the hypervisor manages).
 - Personalized `USBmap.kext` created with [`USBMap`](https://github.com/corpnewt/USBMap).
 
 ### Libvirt
