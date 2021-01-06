@@ -73,14 +73,12 @@
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
       <source file='/var/lib/libvirt/images/ESP.qcow2'/>
-      <backingStore/>
       <target dev='sda' bus='sata'/>
       <address type='drive' controller='0' bus='0' target='0' unit='0'/>
     </disk>
     <disk type='file' device='disk'>
       <driver name='qemu' type='qcow2'/>
       <source file='/var/lib/libvirt/images/macOS.qcow2'/>
-      <backingStore/>
       <target dev='sdc' bus='sata'/>
       <address type='drive' controller='0' bus='0' target='0' unit='2'/>
     </disk>
@@ -151,4 +149,3 @@
     <qemu:arg value='host,vendor=GenuineIntel,+hypervisor,+invtsc,kvm=on,vmware-cpuid-freq=on'/>
   </qemu:commandline>
 </domain>
-
