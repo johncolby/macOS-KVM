@@ -29,7 +29,7 @@
 			<key>IOClass</key>
 			<string>AppleUSBMergeNub</string>
 			<key>IOPathMatch</key>
-			<string>IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/pci-bridge@1,2/IOPP/pci1022,149c@0/AppleUSBXHCIPCI@00000000</string>
+			<string>IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/S18@3/IOPP/pci1022,149c@0/AppleUSBXHCIPCI@00000000</string>
 			<key>IOProviderClass</key>
 			<string>AppleUSBXHCIPCI</string>
 			<key>IOProviderMergeProperties</key>
