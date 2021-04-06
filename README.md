@@ -25,6 +25,7 @@ Starting from my initial bloated configuration, I have slowly been able to trim 
 [johncolby's Completed Build - Ryzen 5 3600 3.6 GHz 6-Core, M1 Mini ITX Tower - PCPartPicker](https://pcpartpicker.com/b/ZGn7YJ)
 
 <details>
+  <summary>Ubuntu linux host details</summary>
 
 ```
 ❯ inxi -Faz
@@ -80,6 +81,14 @@ Sensors:   System Temperatures: cpu: 45.4 C mobo: N/A
 Info:      Processes: 355 Uptime: 2h 42m Memory: 31.31 GiB used: 25.84 GiB (82.5%) Init: systemd v: 245 runlevel: 5
            target: graphical.target Compilers: gcc: 9.3.0 alt: 9 Shell: zsh v: 5.8 running in: tty 2 (SSH) inxi: 3.0.38
 ```
+</details>
+
+<details>
+  <summary>macOS guest details</summary>
+
+![Screen Shot 2021-04-05 at 8 24 09 PM](https://user-images.githubusercontent.com/473295/113655207-3c680e80-964e-11eb-9629-4ebd3df97f1a.png)
+![Screen Shot 2021-04-05 at 8 24 34 PM](https://user-images.githubusercontent.com/473295/113655264-56a1ec80-964e-11eb-8350-791e9b84d1c8.png)
+![Screen Shot 2021-04-05 at 8 27 41 PM](https://user-images.githubusercontent.com/473295/113655293-615c8180-964e-11eb-989d-7a631861a613.png)
 </details>
 
 ## Optimizations 
