@@ -33,8 +33,8 @@ System:    Kernel: 5.8.0-28-generic x86_64 bits: 64 compiler: N/A
            parameters: BOOT_IMAGE=/vmlinuz-5.8.0-28-generic root=/dev/mapper/vgubuntu-root ro quiet splash amd_iommu=on
            iommu=pt vt.handoff=7
            Console: tty 0 dm: GDM3 3.36.3 Distro: Ubuntu 20.04.1 LTS (Focal Fossa)
-Machine:   Type: Desktop Mobo: Gigabyte model: B550I AORUS PRO AX v: x.x serial: <filter> UEFI: American Megatrends
-           v: F11 date: 12/31/2020
+Machine:   Type: Desktop Mobo: Gigabyte model: B550I AORUS PRO AX v: x.x serial: <filter> UEFI: American Megatrends LLC.
+           v: F13g date: 03/25/2021
 CPU:       Topology: 6-Core model: AMD Ryzen 5 3600 bits: 64 type: MT MCP arch: Zen family: 17 (23) model-id: 71 (113)
            stepping: N/A microcode: 8701021 L2 cache: 3072 KiB
            flags: avx avx2 lm nx pae sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 svm bogomips: 86237
@@ -50,21 +50,21 @@ CPU:       Topology: 6-Core model: AMD Ryzen 5 3600 bits: 64 type: MT MCP arch: 
            Type: srbds status: Not affected
            Type: tsx_async_abort status: Not affected
 Graphics:  Device-1: Advanced Micro Devices [AMD/ATI] Navi 10 [Radeon RX 5600 OEM/5600 XT / 5700/5700 XT]
-           vendor: Sapphire Limited driver: vfio-pci v: 0.2 bus ID: 0a:00.0 chip ID: 1002:731f
+           vendor: Sapphire Limited driver: vfio-pci v: 0.2 bus ID: 09:00.0 chip ID: 1002:731f
            Display: server: X.org 1.20.9 driver: ati,fbdev unloaded: modesetting,radeon,vesa tty: 124x8
            Message: Advanced graphics data unavailable in console. Try -G --display
-Audio:     Device-1: Advanced Micro Devices [AMD/ATI] Navi 10 HDMI Audio driver: vfio-pci v: 0.2 bus ID: 0a:00.1
+Audio:     Device-1: Advanced Micro Devices [AMD/ATI] Navi 10 HDMI Audio driver: vfio-pci v: 0.2 bus ID: 09:00.1
            chip ID: 1002:ab38
            Device-2: Advanced Micro Devices [AMD] Starship/Matisse HD Audio vendor: Gigabyte driver: vfio-pci v: 0.2
-           bus ID: 0c:00.4 chip ID: 1022:1487
+           bus ID: 0b:00.4 chip ID: 1022:1487
            Sound Server: ALSA v: k5.8.0-28-generic
 Network:   Device-1: Broadcom and subsidiaries BCM4360 802.11ac Wireless Network Adapter vendor: Apple driver: vfio-pci
            v: 0.2 bus ID: 01:00.0 chip ID: 14e4:43a0
-           Device-2: Realtek RTL8125 2.5GbE vendor: Gigabyte driver: r8125 v: 9.003.05-NAPI port: f000 bus ID: 06:00.0
+           Device-2: Realtek RTL8125 2.5GbE vendor: Gigabyte driver: r8125 v: 9.003.05-NAPI port: f000 bus ID: 05:00.0
            chip ID: 10ec:8125
            IF: eno1 state: up speed: 1000 Mbps duplex: full mac: <filter>
-           Device-3: Intel Wi-Fi 6 AX200 driver: iwlwifi v: kernel port: f000 bus ID: 07:00.0 chip ID: 8086:2723
-           IF: wlp7s0 state: down mac: <filter>
+           Device-3: Intel Wi-Fi 6 AX200 driver: iwlwifi v: kernel port: f000 bus ID: 06:00.0 chip ID: 8086:2723
+           IF: wlp6s0 state: down mac: <filter>
            IF-ID-1: br0 state: up speed: 1000 Mbps duplex: unknown mac: <filter>
            IF-ID-2: virbr0 state: down mac: <filter>
            IF-ID-3: virbr0-nic state: down mac: <filter>
@@ -131,31 +131,30 @@ IOMMU Group 15:
   02:00.0 USB controller [0c03]: Advanced Micro Devices, Inc. [AMD] Device [1022:43ee]
   02:00.1 SATA controller [0106]: Advanced Micro Devices, Inc. [AMD] Device [1022:43eb]
   02:00.2 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD] Device [1022:43e9]
-  03:00.0 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD] Device [1022:43ea]
   03:04.0 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD] Device [1022:43ea]
   03:08.0 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD] Device [1022:43ea]
   03:09.0 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD] Device [1022:43ea]
-  05:00.0 Non-Volatile memory controller [0108]: Samsung Electronics Co Ltd NVMe SSD Controller SM981/PM981/PM983 [144d:a808]
-  06:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller [10ec:8125] (rev 05)
-  07:00.0 Network controller [0280]: Intel Corporation Wi-Fi 6 AX200 [8086:2723] (rev 1a)
+  04:00.0 Non-Volatile memory controller [0108]: Samsung Electronics Co Ltd NVMe SSD Controller SM981/PM981/PM983 [144d:a808]
+  05:00.0 Ethernet controller [0200]: Realtek Semiconductor Co., Ltd. RTL8125 2.5GbE Controller [10ec:8125] (rev 05)
+  06:00.0 Network controller [0280]: Intel Corporation Wi-Fi 6 AX200 [8086:2723] (rev 1a)
 IOMMU Group 16:
-  08:00.0 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 10 XL Upstream Port of PCI Express Switch [1002:1478] (rev c1)
+  07:00.0 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 10 XL Upstream Port of PCI Express Switch [1002:1478] (rev c1)
 IOMMU Group 17:
-  09:00.0 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 10 XL Downstream Port of PCI Express Switch [1002:1479]
+  08:00.0 PCI bridge [0604]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 10 XL Downstream Port of PCI Express Switch [1002:1479]
 IOMMU Group 18:
-  0a:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 10 [Radeon RX 5600 OEM/5600 XT / 5700/5700 XT] [1002:731f] (rev c1)
+  09:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 10 [Radeon RX 5600 OEM/5600 XT / 5700/5700 XT] [1002:731f] (rev c1)
 IOMMU Group 19:
-  0a:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 10 HDMI Audio [1002:ab38]
+  09:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 10 HDMI Audio [1002:ab38]
 IOMMU Group 20:
-  0b:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function [1022:148a]
+  0a:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse PCIe Dummy Function [1022:148a]
 IOMMU Group 21:
-  0c:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP [1022:1485]
+  0b:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Reserved SPP [1022:1485]
 IOMMU Group 22:
-  0c:00.1 Encryption controller [1080]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP [1022:1486]
+  0b:00.1 Encryption controller [1080]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse Cryptographic Coprocessor PSPCPP [1022:1486]
 IOMMU Group 23:
-  0c:00.3 USB controller [0c03]: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller [1022:149c]
+  0b:00.3 USB controller [0c03]: Advanced Micro Devices, Inc. [AMD] Matisse USB 3.0 Host Controller [1022:149c]
 IOMMU Group 24:
-  0c:00.4 Audio device [0403]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller [1022:1487]
+  0b:00.4 Audio device [0403]: Advanced Micro Devices, Inc. [AMD] Starship/Matisse HD Audio Controller [1022:1487]
 ```
 </details>
 

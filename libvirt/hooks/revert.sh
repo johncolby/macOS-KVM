@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Reattach GPU to host
-virsh nodedev-reattach pci_0000_0a_00_1
-virsh nodedev-reattach pci_0000_0a_00_0
+virsh nodedev-reattach pci_0000_09_00_1
+virsh nodedev-reattach pci_0000_09_00_0
 
 # Load AMD driver
 modprobe amdgpu

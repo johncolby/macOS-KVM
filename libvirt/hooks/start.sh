@@ -7,5 +7,5 @@ systemctl stop display-manager
 modprobe -r amdgpu
 
 # Detach GPU from host
-virsh nodedev-detach pci_0000_0a_00_0
-virsh nodedev-detach pci_0000_0a_00_1
+virsh nodedev-detach pci_0000_09_00_0
+virsh nodedev-detach pci_0000_09_00_1
