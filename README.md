@@ -29,12 +29,12 @@ Starting from my initial bloated configuration, I have slowly been able to trim 
 
 ```
 ❯ inxi -Faz
-System:    Kernel: 5.8.0-18-generic x86_64 bits: 64 compiler: N/A
-           parameters: BOOT_IMAGE=/vmlinuz-5.8.0-18-generic root=/dev/mapper/vgubuntu-root ro modprobe.blacklist=amdgpu
-           quiet splash amd_iommu=on iommu=pt vt.handoff=7
-           Console: tty 2 dm: GDM3 3.36.3 Distro: Ubuntu 20.04.1 LTS (Focal Fossa)
+System:    Kernel: 5.8.0-28-generic x86_64 bits: 64 compiler: N/A
+           parameters: BOOT_IMAGE=/vmlinuz-5.8.0-28-generic root=/dev/mapper/vgubuntu-root ro quiet splash amd_iommu=on
+           iommu=pt vt.handoff=7
+           Console: tty 0 dm: GDM3 3.36.3 Distro: Ubuntu 20.04.1 LTS (Focal Fossa)
 Machine:   Type: Desktop Mobo: Gigabyte model: B550I AORUS PRO AX v: x.x serial: <filter> UEFI: American Megatrends
-           v: F10 date: 09/18/2020
+           v: F11 date: 12/31/2020
 CPU:       Topology: 6-Core model: AMD Ryzen 5 3600 bits: 64 type: MT MCP arch: Zen family: 17 (23) model-id: 71 (113)
            stepping: N/A microcode: 8701021 L2 cache: 3072 KiB
            flags: avx avx2 lm nx pae sse sse2 sse3 sse4_1 sse4_2 sse4a ssse3 svm bogomips: 86237
@@ -51,18 +51,19 @@ CPU:       Topology: 6-Core model: AMD Ryzen 5 3600 bits: 64 type: MT MCP arch: 
            Type: tsx_async_abort status: Not affected
 Graphics:  Device-1: Advanced Micro Devices [AMD/ATI] Navi 10 [Radeon RX 5600 OEM/5600 XT / 5700/5700 XT]
            vendor: Sapphire Limited driver: vfio-pci v: 0.2 bus ID: 0a:00.0 chip ID: 1002:731f
-           Display: server: X.org 1.20.8 driver: ati,fbdev unloaded: modesetting,radeon,vesa compositor: gnome-shell
-           tty: 124x39
+           Display: server: X.org 1.20.9 driver: ati,fbdev unloaded: modesetting,radeon,vesa tty: 124x8
            Message: Advanced graphics data unavailable in console. Try -G --display
 Audio:     Device-1: Advanced Micro Devices [AMD/ATI] Navi 10 HDMI Audio driver: vfio-pci v: 0.2 bus ID: 0a:00.1
            chip ID: 1002:ab38
            Device-2: Advanced Micro Devices [AMD] Starship/Matisse HD Audio vendor: Gigabyte driver: vfio-pci v: 0.2
            bus ID: 0c:00.4 chip ID: 1022:1487
-           Sound Server: ALSA v: k5.8.0-18-generic
-Network:   Device-1: Realtek RTL8125 2.5GbE vendor: Gigabyte driver: r8125 v: 9.003.05-NAPI port: f000 bus ID: 06:00.0
+           Sound Server: ALSA v: k5.8.0-28-generic
+Network:   Device-1: Broadcom and subsidiaries BCM4360 802.11ac Wireless Network Adapter vendor: Apple driver: vfio-pci
+           v: 0.2 bus ID: 01:00.0 chip ID: 14e4:43a0
+           Device-2: Realtek RTL8125 2.5GbE vendor: Gigabyte driver: r8125 v: 9.003.05-NAPI port: f000 bus ID: 06:00.0
            chip ID: 10ec:8125
            IF: eno1 state: up speed: 1000 Mbps duplex: full mac: <filter>
-           Device-2: Intel Wi-Fi 6 AX200 driver: iwlwifi v: kernel port: f000 bus ID: 07:00.0 chip ID: 8086:2723
+           Device-3: Intel Wi-Fi 6 AX200 driver: iwlwifi v: kernel port: f000 bus ID: 07:00.0 chip ID: 8086:2723
            IF: wlp7s0 state: down mac: <filter>
            IF-ID-1: br0 state: up speed: 1000 Mbps duplex: unknown mac: <filter>
            IF-ID-2: virbr0 state: down mac: <filter>
