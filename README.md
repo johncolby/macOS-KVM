@@ -176,7 +176,6 @@ IOMMU Group 24:
 - Remove `SSDT-DTGP.aml` (not needed; can use the [PMPM method](https://dortania.github.io/Getting-Started-With-ACPI/Universal/plug-methods/manual.html) instead for enabling power management in `SSDT-PLUG.aml`).
 - Remove `SSDT-EC.aml` (not needed; `AppleBusPowerController` attaches fine without it under Catalina, and KVM OVMF firmware doesn't have a real EC that needs to be turned off).
 - Remove `SSDT-USBX.aml` (not needed; USB power properties can be added to USB port mapping kext (`USBmap.kext`).
-- Remove `WhateverGreen.kext` (not needed for my needs with AMD 5700XT, although probably never hurts).
 - Remove `MCEReporterDisabler.kext` (not getting kernel panics, so not needed).
 - Remove `SSDT-PLUG.aml` (not needed for CPU power management, which the hypervisor manages).
 - Personalized `USBmap.kext` created with [`USBMap`](https://github.com/corpnewt/USBMap).
