@@ -183,7 +183,7 @@
 			<key>Cpuid1Data</key>
 			<data>VAYFAAAAAAAAAAAAAAAAAA==</data>
 			<key>Cpuid1Mask</key>
-			<data>////AAAAAAAAAAAAAAAAAA==</data>
+			<data>/////wAAAAAAAAAAAAAAAA==</data>
 			<key>DummyPowerManagement</key>
 			<false/>
 			<key>MaxKernel</key>
@@ -470,7 +470,7 @@
 			<key>MLB</key>
 			<string>***REMOVED***</string>
 			<key>ProcessorType</key>
-			<integer>0</integer>
+			<integer>3841</integer>
 			<key>ROM</key>
 			<data>***REMOVED***</data>
 			<key>SpoofVendor</key>
