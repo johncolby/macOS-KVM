@@ -199,27 +199,27 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
-				<string></string>
+				<string>_cpuid_set_info </string>
 				<key>Comment</key>
-				<string>DhinakG - cpuid_set_cpufamily - force CPUFAMILY_INTEL_PENRYN - 11.3b1</string>
+				<string>algrey - _cpuid_set_cpufamily - Force CPUFAMILY_INTEL_PENRYN - 11.3 + / 12.0</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>MdIAAIA9AAAAAAZ1AA==</data>
+				<data>gD0AAAAABnU=</data>
 				<key>Identifier</key>
 				<string>kernel</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>//8AAP//AAAA////AA==</data>
+				<data>//8AAAAA//8=</data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>21.99.99</string>
 				<key>MinKernel</key>
 				<string>20.4.0</string>
 				<key>Replace</key>
-				<data>swG6vE/qeOldAAAAkA==</data>
+				<data>urxP6ngx2+s=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
