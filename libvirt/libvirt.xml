@@ -157,6 +157,6 @@
     <qemu:arg value='-device'/>
     <qemu:arg value='isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc'/>
     <qemu:arg value='-cpu'/>
-    <qemu:arg value='host,vendor=GenuineIntel'/>
+    <qemu:arg value='Icelake-Server,vendor=GenuineIntel'/>
   </qemu:commandline>
 </domain>
