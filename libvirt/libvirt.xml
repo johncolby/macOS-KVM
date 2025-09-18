@@ -107,7 +107,7 @@
       <target chassis='4' port='0x13'/>
       <address type='pci' domain='0x0000' bus='0x00' slot='0x07' function='0x0'/>
     </controller>
-    <controller type="usb" index="0" model="none"/>
+    <controller type='usb' index='0' model='none'/>
     <interface type='bridge'>
       <mac address='52:54:00:92:d4:7b'/>
       <source bridge='br0'/>
