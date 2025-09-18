@@ -40,7 +40,7 @@
     <partition>/machine</partition>
   </resource>
   <os>
-    <type arch='x86_64' machine='pc-q35-4.2'>hvm</type>
+    <type arch='x86_64' machine='pc-q35-8.2'>hvm</type>
     <loader readonly='yes' type='pflash'>/usr/share/OVMF/OVMF_CODE.fd</loader>
     <nvram>/var/lib/libvirt/qemu/nvram/macOS_VARS.fd</nvram>
     <boot dev='hd'/>
@@ -155,6 +155,8 @@
   <seclabel type='dynamic' model='apparmor' relabel='yes'/>
   <seclabel type='dynamic' model='dac' relabel='yes'/>
   <qemu:commandline>
+    <qemu:arg value='-global'/>
+    <qemu:arg value='ICH9-LPC.acpi-pci-hotplug-with-bridge-support=off'/>
     <qemu:arg value='-device'/>
     <qemu:arg value='isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc'/>
     <qemu:arg value='-cpu'/>
