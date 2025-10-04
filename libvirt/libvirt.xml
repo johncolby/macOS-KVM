@@ -39,20 +39,23 @@
   <resource>
     <partition>/machine</partition>
   </resource>
-  <os>
+  <os firmware='efi'>
     <type arch='x86_64' machine='pc-q35-8.2'>hvm</type>
-    <loader readonly='yes' type='pflash'>/usr/share/OVMF/OVMF_CODE.fd</loader>
-    <nvram>/var/lib/libvirt/qemu/nvram/macOS_VARS.fd</nvram>
+    <firmware>
+      <feature enabled='no' name='enrolled-keys'/>
+      <feature enabled='no' name='secure-boot'/>
+    </firmware>
+    <loader readonly='yes' type='pflash'>/usr/share/OVMF/OVMF_CODE_4M.fd</loader>
+    <nvram template='/usr/share/OVMF/OVMF_VARS_4M.fd'>/var/lib/libvirt/qemu/nvram/macOS_VARS.fd</nvram>
     <boot dev='hd'/>
-    <bootmenu enable='yes'/>
   </os>
   <features>
     <acpi/>
     <apic/>
     <vmport state='off'/>
   </features>
-  <cpu mode='host-passthrough' check='none'>
-    <topology sockets='1' cores='8' threads='2'/>
+  <cpu mode='host-passthrough' check='none' migratable='on'>
+    <topology sockets='1' dies='1' cores='8' threads='2'/>
     <cache mode='passthrough'/>
     <feature policy='require' name='topoext'/>
   </cpu>
@@ -116,6 +119,7 @@
     </interface>
     <input type='mouse' bus='ps2'/>
     <input type='keyboard' bus='ps2'/>
+    <audio id='1' type='none'/>
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <driver name='vfio'/>
       <source>
@@ -150,6 +154,7 @@
       </source>
       <address type='pci' domain='0x0000' bus='0x04' slot='0x00' function='0x0'/>
     </hostdev>
+    <watchdog model='itco' action='reset'/>
     <memballoon model='none'/>
   </devices>
   <seclabel type='dynamic' model='apparmor' relabel='yes'/>
@@ -161,3 +166,4 @@
     <qemu:arg value='Icelake-Server,vendor=GenuineIntel'/>
   </qemu:commandline>
 </domain>
+
